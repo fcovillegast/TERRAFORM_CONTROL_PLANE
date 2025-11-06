@@ -12,9 +12,10 @@ variable "cidr_list" {
   default = []
 }
 
-variable "availability_zone" {
+variable "availability_zone_list" {
   description = "AWS region to launch servers."
-  default = "us-east-1"
+  type = list(string)
+  default = []
 }
 
 variable "name_prefix" {
