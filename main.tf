@@ -4,7 +4,7 @@ module "subnets" {
 
   vpc_id = var.vpc_id
   name_prefix = var.name_prefix
-  availability_zone = var.availability_zone
+  availability_zone = var.availability_zone_list[count.index]
   tags = var.tags
   cidr_block = var.cidr_list[count.index]
 }
