@@ -8,13 +8,10 @@ variable "vpc_id" {
 
 variable "cidr_list" {
   description = "Los cidrs por donde se moverá el control plane"
-  type = list(string)
-  default = []
-}
-
-variable "availability_zone_list" {
-  description = "AWS region to launch servers."
-  type = list(string)
+  type = list(object({
+    cidr=string,
+    zone=string
+  }))
   default = []
 }
 
