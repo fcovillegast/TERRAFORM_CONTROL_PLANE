@@ -9,7 +9,7 @@ variable "vpc_id" {
 variable "cidr_list" {
   description = "Los cidrs por donde se moverá el control plane"
   type = list(string)
-  default = ()
+  default = []
 }
 
 variable "availability_zone" {
